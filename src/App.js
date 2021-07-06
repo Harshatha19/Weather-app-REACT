@@ -12,14 +12,14 @@ class App extends React.Component{
   constructor(){
     super();
     this.state = {
-      city: undefined,
-      country: undefined,
-      icon: undefined,
-      main: undefined,
-      celsius: undefined,
-      temp_max: undefined,
-      temp_min: undefined,
-      description: undefined,
+      city: 'undefined',
+      country: 'undefined',
+      icon: 'undefined',
+      main: 'undefined',
+      celsius: 'undefined',
+      temp_max: 'undefined',
+      temp_min: 'undefined',
+      description: 'undefined',
       error: false
     };
     
@@ -43,11 +43,11 @@ class App extends React.Component{
     get_WeatherIcon(icons, rangeID){
       switch(true){
         case rangeID >= 200 && rangeID <= 232:
-          this.setState({icon: this.weatherIcon.Thunderstorm})
+          this.setState({icons: this.weatherIcon.Thunderstorm})
           break;
 
           case rangeID >= 300 && rangeID <= 321:
-          this.setState({icon: this.weatherIcon.Drizzle})
+          this.setState({icons: this.weatherIcon.Drizzle})
           break;
 
           case rangeID >= 500 && rangeID <= 531:
@@ -55,20 +55,20 @@ class App extends React.Component{
           break;
 
           case rangeID >= 600 && rangeID <= 622:
-          this.setState({icon: this.weatherIcon.Snow})
+          this.setState({icons: this.weatherIcon.Snow})
           break;
 
           case rangeID >= 701 && rangeID <= 781:
-          this.setState({icon: this.weatherIcon.Atmosphere})
+          this.setState({icons: this.weatherIcon.Atmosphere})
           break;
           case rangeID === 800:
           this.setState({icon: this.weatherIcon.Clear})
           break;
           case rangeID >= 801 && rangeID <= 804:
-          this.setState({icon: this.weatherIcon.Clouds})
+          this.setState({icons: this.weatherIcon.Clouds})
           break;
           default:
-            this.setState({icon: this.weatherIcon.Clouds}) 
+            this.setState({icons: this.weatherIcon.Clouds}) 
       }
     }
 
