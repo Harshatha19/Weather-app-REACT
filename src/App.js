@@ -12,14 +12,14 @@ class App extends React.Component{
   constructor(){
     super();
     this.state = {
-      city: "",
-      country: "",
-      icon: "",
-      main: "",
-      celsius: "",
-      temp_max: "",
-      temp_min: "",
-      description: "",
+      city: undefined,
+      country: undefined,
+      icon: undefined,
+      main: undefined,
+      celsius: undefined,
+      temp_max: undefined,
+      temp_min: undefined,
+      description: undefined,
       error: false
     };
     
